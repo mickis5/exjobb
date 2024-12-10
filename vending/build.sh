@@ -2,10 +2,7 @@
 
 
 # Add path to Randoop .jar-fil och modbat .jar-fil
-[ -e "${RANDOOP_JAR}" ] || RANDOOP_JAR="`find ${HOME}/randoop -name 'randoop-all-4*.jar'`"
-[ -e "${MODBAT_JAR}" ] || MODBAT_JAR="`find ${HOME}/modbat -name 'modbat.jar'`"
-
-
+. setup.sh
 
 javac -cp "$RANDOOP_JAR:." $(find . -name "*.java" ! -name "VendingMBT.java")
 
@@ -19,7 +16,7 @@ else
 fi
 
 
-scalac -cp "$RANDOOP_JAR:$MODBAT_JAR:." VendingModel.scala
+scalac -nobootcp -cp "$RANDOOP_JAR:$MODBAT_JAR:." VendingModel.scala
 
 # lyckades scala??
 if [ $? -eq 0 ]; then

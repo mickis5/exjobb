@@ -22,7 +22,7 @@ public class VendingMachine {
         }
 
         choice = userChoice;
-        expectedAmount = price(choice); // Sätt pris baserat på valet
+        expectedAmount = price(choice); // Satt pris baserat pa valet
         System.out.println("Choice made: " + choice + ", Price: " + expectedAmount);
     }
 
@@ -54,7 +54,7 @@ public class VendingMachine {
         if (choice == -1 || !paymentMade) {
             throw new IllegalStateException("Cannot dispense without a valid choice or payment");
         }
-        // if (random.nextDouble() < 0.1) { // Simulera 10 % hårdvarufel
+        // if (random.nextDouble() < 0.1) { // Simulera 10 % hardvarufel
         // harderror = true;
         // throw new RuntimeException("Hardware error");
         // }
@@ -76,7 +76,7 @@ public class VendingMachine {
         harderror = false;
     }
 
-    // statusvärden
+    // statusvarden
     public boolean isWrongpay() {
         return wrongpay;
     }

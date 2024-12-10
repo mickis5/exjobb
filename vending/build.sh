@@ -2,8 +2,8 @@
 
 
 # Add path to Randoop .jar-fil och modbat .jar-fil
-RANDOOP_JAR="..."
-MODBAT_JAR="..."
+[ -e "${RANDOOP_JAR}" ] || RANDOOP_JAR="`find ${HOME}/randoop -name 'randoop-all-4*.jar'`"
+[ -e "${MODBAT_JAR}" ] || MODBAT_JAR="`find ${HOME}/modbat -name 'modbat.jar'`"
 
 
 

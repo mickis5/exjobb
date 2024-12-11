@@ -16,7 +16,7 @@ else
 fi
 
 
-scalac -nobootcp -cp "$RANDOOP_JAR:$MODBAT_JAR:." VendingModel.scala
+scalac -nobootcp -cp "$RANDOOP_JAR:$MODBAT_JAR:." VendingModel.scala RandoopModel.scala
 
 # lyckades scala??
 if [ $? -eq 0 ]; then

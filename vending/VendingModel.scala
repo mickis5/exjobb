@@ -29,13 +29,16 @@ def runRandoop(): Unit = {
     val randoopArgs = Array(
       "gentests", 
       "--classlist=VMlist.txt",  
-      "--time-limit=3"         
+      "--time-limit=3", 
+      "--unchecked-exception=error"       
     )
 
    try {
 
       println("Running randoop ")
-      randoop.main.Main.main(randoopArgs)
+      //randoop.main.Main.main(randoopArgs)
+      val mainInstance = new randoop.main.Main()
+      mainInstance.nonStaticMain(randoopArgs)
       println("Randoop finished successfully???")
     } catch {
       case e: Exception =>

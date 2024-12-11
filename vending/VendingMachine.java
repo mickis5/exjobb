@@ -28,6 +28,7 @@ public class VendingMachine {
 
     // get price
     public int price(int item) {
+        System.out.println("item?? :" + item);
         return pricelist[item - 1];
     }
 
@@ -61,10 +62,6 @@ public class VendingMachine {
         ok = true; // Dispensering lyckades
         System.out.println("Product dispensed for choice: " + choice);
         // reset();
-    }
-
-    public void jacoco() {
-        System.out.println("X");
     }
 
     public void reset() {

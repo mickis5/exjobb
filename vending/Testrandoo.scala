@@ -6,14 +6,19 @@ object Testrandoo {
    
     val randoopArgs = Array(
       "gentests", 
-      "--classlist=VMlist.txt",  
+      "--testclass=VendingMachine",  
       "--time-limit=3",
-      "--no-error-revealing-tests=false", 
-      "--no-regression-tests=false"
+     "--no-error-revealing-tests=false", 
+     "--no-regression-tests=false",
+      "--unchecked-exception=error"   
     )
 
    try {
-    randoop.main.Main.main(randoopArgs)
+    //randoop.main.Main.main(randoopArgs)
+    
+      val mainInstance = new randoop.main.Main()
+      mainInstance.nonStaticMain(randoopArgs)
+      
     println("Randoop finished successfully???")
   } catch {
     case e: Exception =>

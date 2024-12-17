@@ -23,22 +23,22 @@ public class VendingMachine {
 
         choice = userChoice;
         expectedAmount = price(choice); // Satt pris baserat pa valet
-        System.out.println("Choice made: " + choice + ", Price: " + expectedAmount);
+        // System.out.println("Choice made: " + choice + ", Price: " + expectedAmount);
     }
 
     // get price
     public int price(int item) {
-        System.out.println("item?? :" + item);
+        // System.out.println("item?? :" + item);
         return pricelist[item - 1];
     }
 
     public void cancel() {
         reset();
-        System.out.println("Choice cancelled");
+        // System.out.println("Choice cancelled");
     }
 
     public void pay(int amount) {
-        System.out.println("pay method :" + amount + " choice? " + choice);
+        // System.out.println("pay method :" + amount + " choice? " + choice);
         if (choice == -1) {
             throw new IllegalStateException("No choice has been made");
         }
@@ -51,7 +51,8 @@ public class VendingMachine {
     }
 
     public void dispense() {
-        System.out.println("dispense method " + "choice: " + choice + " payment? " + paymentMade);
+        // System.out.println("dispense method " + "choice: " + choice + " payment? " +
+        // paymentMade);
         if (choice == -1 || !paymentMade) {
             throw new IllegalStateException("Cannot dispense without a valid choice or payment");
         }
@@ -60,7 +61,7 @@ public class VendingMachine {
         // throw new RuntimeException("Hardware error");
         // }
         ok = true; // Dispensering lyckades
-        System.out.println("Product dispensed for choice: " + choice);
+        // System.out.println("Product dispensed for choice: " + choice);
         // reset();
     }
 

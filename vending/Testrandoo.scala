@@ -5,12 +5,18 @@ object Testrandoo {
   def runRandoop(): Unit = {
    
     val randoopArgs = Array(
-      "gentests", 
-      "--testclass=VendingMachine",  
-      "--time-limit=3",
-     "--no-error-revealing-tests=false", 
-     "--no-regression-tests=false",
-      "--unchecked-exception=error"   
+     "gentests",
+                "--classlist=VMlist.txt",
+                "--time-limit=3",
+                "--unchecked-exception=error",
+                "--progressdisplay=true",
+                "--progressintervalmillis=60000",
+                "--progressintervalsteps=1000",
+                "--debug-checks=true",
+                "--log=randoop-debugScala.log",
+                "--selection-log=selectionScala.log",
+                "--operation-history-log=operation-historyScala.log",
+                "--print-non-compiling-file=true"  
     )
 
    try {

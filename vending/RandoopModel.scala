@@ -4,11 +4,12 @@ import modbat.dsl._
 class RandoopModel extends Model {
 
 def runRandoop(): Unit = {
+
     val randoopArgs = Array(
-      "gentests", 
-      "--classlist=VMlist.txt",  
-      "--time-limit=3", 
-      "--unchecked-exception=error"       
+      "gentests",
+                "--classlist=VMlist.txt",
+                "--time-limit=1",
+                "--unchecked-exception=error"
     )
 
    try {

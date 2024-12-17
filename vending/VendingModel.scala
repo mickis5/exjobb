@@ -30,7 +30,9 @@ def runRandoop(): Unit = {
       "gentests", 
       "--classlist=VMlist.txt",  
       "--time-limit=3", 
-      "--unchecked-exception=error"       
+      "--unchecked-exception=error",
+      "--progressdisplay=true",
+      "--debug-checks=true"       
     )
 
    try {

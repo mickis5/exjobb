@@ -4,8 +4,16 @@ public class javaRandoop {
         String[] randoopArgs = {
                 "gentests",
                 "--classlist=VMlist.txt",
-                "--time-limit=20",
-                "--unchecked-exception=error"
+                "--time-limit=1",
+                "--unchecked-exception=error",
+                "--progressdisplay=true",
+
+                // "--debug-checks=true",
+                "--log=randoop-debug.log",
+                "--selection-log=selection.log",
+                "--operation-history-log=operation-history.log",
+                "--print-non-compiling-file=true",
+                "--randomseed=12345"
 
         };
 
